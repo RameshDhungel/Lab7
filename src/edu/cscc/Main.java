@@ -1,10 +1,19 @@
 package edu.cscc;
 import java.util.*;
 
+/**
+ * Main Class
+ * @author rdhungel
+ * @version 1.0
+ */
 public class Main {
 
     private static Scanner input = new Scanner(System.in);
 
+    /**
+     * This is the main method
+     * @param args runtime arguments
+     */
     public static void main(String[] args) {
         String h_pick;
         String c_pick;

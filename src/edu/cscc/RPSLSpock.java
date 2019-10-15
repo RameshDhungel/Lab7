@@ -1,6 +1,11 @@
 package edu.cscc;
 import java.util.Random;
 
+/**
+ * RPSLSpock class
+ * @author rdhungel
+ * @version 1.0
+ */
 public class RPSLSpock {
 
     static Random rand = new Random(System.currentTimeMillis());
@@ -11,6 +16,10 @@ public class RPSLSpock {
     public static final String LIZARD = "lizard";
     public static final String SPOCK = "spock";
 
+    /**
+     * @param pick this is the human choose
+     * @return boolean that determines if the pick is valid
+     */
     public static boolean isValidPick(String pick) {
         if (pick == null) {
             return false;
@@ -23,6 +32,10 @@ public class RPSLSpock {
                 SPOCK.equalsIgnoreCase(pick));
     }
 
+    /**
+     *
+     * @return computer's pick
+     */
     public static String generatePick() {
         String pick = null;
         switch (rand.nextInt(5)) {
@@ -45,6 +58,12 @@ public class RPSLSpock {
         return pick;
     }
 
+    /**
+     *
+     * @param c_pick computers pick
+     * @param h_pick human pick
+     * @return boolean that determines if the computer won
+     */
     public static boolean isComputerWin(String c_pick,String h_pick) {
         h_pick = h_pick.toLowerCase();
         return ((ROCK.equals(c_pick) && (SCISSORS.equals(h_pick) || LIZARD.equals(h_pick))) ||
